@@ -1,0 +1,163 @@
+// Fonts 
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+// Variables
+$container-width: min(350px, 90%);
+
+$primary: hsl(215, 51%, 70%);
+$secondary: hsl(178, 100%, 50%);
+$neutral1: hsl(217, 54%, 11%);
+$neutral2: hsl(216, 50%, 16%);
+$neutral3: hsl(215, 32%, 27%);
+
+// Reset
+* {
+  margin: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// General Styling
+body {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-items: center;
+  height: 100vh;
+  background: $neutral1;
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: $primary;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3 {
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+hr {
+  margin-block: 1rem;
+  border: 1px solid $neutral3;
+}
+
+// Utility Classes
+.lead {
+  color: $primary;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+@for $i from 1 through 4 {
+  .gap-#{$i} {
+    gap: 0.25rem * $i;
+  }
+}
+
+// MAIN
+h3 {
+  font-weight: 600;
+
+  transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+  &:hover {
+    color: $secondary;
+    cursor: pointer;
+  }
+}
+
+.price,
+.remainingtime {
+  font-weight: 400;
+}
+
+.card {
+  max-width: $container-width;
+  margin-inline: auto;
+  background: $neutral2;
+  border-radius: 1rem;
+  padding: 1.5rem;
+
+  .card-img-container {
+    position: relative;
+    margin-bottom: 1rem;
+
+    img {
+      border-radius: 10px;
+    }
+
+    .card-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: hsla(178, 100%, 50%, .6);
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+
+      transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+      &:hover {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .price {
+    color: $secondary;
+  }
+
+  .card__footer {
+    img {
+      width: 32px;
+      height: auto;
+      outline: 1px solid white;
+      border-radius: 50%;
+    }
+
+    span {
+      color: white;
+
+      transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+      &:hover {
+        color: $secondary;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.attribution {
+  padding: 1rem 0;
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: white;
+  }
+}

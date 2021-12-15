@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-items: center;
+  height: 100vh;
+  background: #0d192b;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #8bacda;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3 {
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+hr {
+  margin-block: 1rem;
+  border: 1px solid #2f415b;
+}
+
+.lead {
+  color: #8bacda;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+h3 {
+  font-weight: 600;
+  transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+h3:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+
+.price,
+.remainingtime {
+  font-weight: 400;
+}
+
+.card {
+  max-width: min(350px, 90%);
+  margin-inline: auto;
+  background: #14253d;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+.card .card-img-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.card .card-img-container img {
+  border-radius: 10px;
+}
+.card .card-img-container .card-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 255, 247, 0.6);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.card .card-img-container .card-img-overlay:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.card .price {
+  color: #00fff7;
+}
+.card .card__footer img {
+  width: 32px;
+  height: auto;
+  outline: 1px solid white;
+  border-radius: 50%;
+}
+.card .card__footer span {
+  color: white;
+  transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.card .card__footer span:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+
+.attribution {
+  padding: 1rem 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: white;
+}
+
+/*# sourceMappingURL=main.css.map */
